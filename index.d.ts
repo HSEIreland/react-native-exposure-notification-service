@@ -1,4 +1,4 @@
-declare module "react-native-exposure-notification-service" {
+declare module "@nearform/react-native-exposure-notification-service" {
   import { EventSubscriptionVendor } from "react-native"
 
   export enum AuthorisedStatus {
@@ -81,7 +81,7 @@ declare module "react-native-exposure-notification-service" {
 
     getDiagnosisKeys(): Promise<DiagnosisKey[]>
 
-    checkExposure(readDetails?: boolean): void
+    checkExposure(readDetails?: boolean, skipTimeCheck?: boolean): void
 
     getCloseContacts(): Promise<CloseContact[]>
 

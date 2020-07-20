@@ -22,7 +22,7 @@ export default function useContactTracing() {
             ev.onStatusChanged && setStatus(ev.onStatusChanged)
         }        
 
-        let subscription = emitter.addListener('exposureEvent', handleEvent)
+       let subscription = emitter.addListener('exposureEvent', handleEvent)
 
 
         async function tryStart() {
@@ -101,7 +101,7 @@ export default function useContactTracing() {
     const checkExposure = async () => {
         loading()
         try {
-            ExposureNotificationModule.checkExposure(false)
+            ExposureNotificationModule.checkExposure(false, true)
             setResult(`checkExposure: called`)
         } catch(e) {
             setResult(`checkExposure - Error: ${e}`)
